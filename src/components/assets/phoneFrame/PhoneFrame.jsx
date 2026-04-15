@@ -45,7 +45,7 @@ export const PhoneFrame = ({ children, screenshot, index = 0 }) => {
             className="pointer-events-none absolute inset-0 z-0"
           >
             <div className="aspect-9/19.5 lg:border-12 w-full overflow-hidden rounded-[2.5rem] border-[6px] border-black bg-black shadow-xl lg:rounded-[3.5rem] xl:rounded-[2.8rem] xl:border-8">
-              <div className="relative h-full w-full overflow-hidden rounded-[1.8rem] bg-white pt-4 lg:rounded-[2.8rem] xl:rounded-[2.2rem]">
+              <div className="relative h-full w-full overflow-hidden rounded-[1.8rem] bg-white lg:rounded-[2.8rem] xl:rounded-[2.2rem]">
                 <img
                   src={backImage}
                   alt="Back"
@@ -68,7 +68,7 @@ export const PhoneFrame = ({ children, screenshot, index = 0 }) => {
           isArray ? "pointer-events-auto cursor-pointer" : "pointer-events-auto"
         }`}
       >
-        <div className="absolute left-1/2 top-0 z-40 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-black lg:h-6 lg:w-20 xl:h-2 xl:w-20"></div>
+        <div className="absolute left-1/2 top-0 z-40 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-black lg:h-4 lg:w-20 xl:h-2 xl:w-20"></div>
 
         <div className="relative h-full w-full overflow-hidden rounded-[1.8rem] bg-white lg:rounded-[2.8rem] xl:rounded-[2.2rem]">
           <AnimatePresence mode="popLayout">

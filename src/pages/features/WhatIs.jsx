@@ -97,7 +97,7 @@ export const WhatIs = () => {
           </section>
 
           {/* Section Label */}
-          <span className="text-primary border-primary border-l-10 pl-3 text-5xl font-extrabold uppercase">
+          <span className="text-primary border-primary border-l-10 pl-3 text-base font-extrabold uppercase lg:text-5xl xl:text-2xl">
             Goal
           </span>
 
@@ -110,12 +110,12 @@ export const WhatIs = () => {
           </div>
 
           {/* Section Label */}
-          <span className="text-primary border-primary border-l-10 pl-3 text-5xl font-extrabold uppercase">
+          <span className="text-primary border-primary border-l-10 pl-3 text-base font-extrabold uppercase lg:text-5xl xl:text-2xl">
             Benefits
           </span>
 
           {/* Benefits Cards */}
-          <div className="flex flex-col gap-4 lg:gap-10 xl:gap-6">
+          <div className="flex flex-col gap-4 pb-10 lg:gap-10 lg:pb-28 xl:gap-6 xl:pb-20">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -127,12 +127,12 @@ export const WhatIs = () => {
                   duration: 0.4,
                   ease: "easeOut",
                 }}
-                className="flex flex-col gap-2 rounded-full border border-blue-700 px-16 py-4 shadow-xl"
+                className="flex flex-col gap-2 rounded-full border border-blue-700 px-20 py-8 shadow-xl"
               >
                 <h3 className="text-primary text-lg font-extrabold lg:text-4xl xl:text-2xl">
                   {benefit.title}
                 </h3>
-                <p className="text-sm font-medium leading-relaxed text-slate-500 lg:text-3xl xl:text-base">
+                <p className="text-sm font-semibold leading-relaxed text-slate-500 lg:text-4xl xl:text-base">
                   {benefit.description}
                 </p>
               </motion.div>

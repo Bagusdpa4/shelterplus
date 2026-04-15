@@ -24,7 +24,7 @@ export const Menu = () => {
       path: "/all-features",
     },
     {
-      title: "How It Works",
+      title: "Best-Fit App",
       icon: <BiRepost />,
       bgIcon: "bg-blue-900",
       path: "/how-it-works",

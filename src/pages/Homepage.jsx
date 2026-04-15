@@ -28,7 +28,7 @@ export const Homepage = () => {
         className="relative z-10 flex flex-col items-center text-center"
       >
         {/* Logo Icon (Hexagon Abstract) */}
-        <div className="lg:h-160 lg:w-160 mb-10 flex h-32 w-32 items-center justify-center xl:h-80 xl:w-80">
+        <div className="lg:h-120 lg:w-120 mb-10 flex h-32 w-32 items-center justify-center xl:h-80 xl:w-80">
           <img
             src="/shelter+.png"
             alt="Shelter+ Logo"
@@ -37,13 +37,13 @@ export const Homepage = () => {
         </div>
 
         {/* Brand Name */}
-        <h1 className="text-primary text-5xl font-black lg:text-8xl xl:text-7xl">
+        <h1 className="text-primary text-5xl font-black lg:text-9xl xl:text-7xl">
           Shelter+
         </h1>
 
         {/* Subtitle */}
-        <p className="text-secondary2 mt-2 text-sm font-semibold uppercase tracking-[0.2em] lg:text-4xl xl:text-2xl">
-          SECURITY Management System
+        <p className="text-secondary2 mt-10 text-sm font-semibold uppercase tracking-[0.2em] lg:text-4xl xl:text-2xl">
+          All services connected in one application
         </p>
 
         {/* 3. Interaction Prompt */}

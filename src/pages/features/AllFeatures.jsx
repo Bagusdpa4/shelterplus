@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { PhoneFrame } from "../../components/assets/phoneFrame/PhoneFrame";
 import { FeatureTabs } from "../../components/assets/features/FeatureTabs";
-import { FaArrowLeft, FaHome, FaBriefcase, FaDesktop } from "react-icons/fa";
-import { CiCircleCheck, CiWarning } from "react-icons/ci";
-import { FaUserTie, FaBrain } from "react-icons/fa";
-import { GiBroom } from "react-icons/gi";
-import { SiAdguard } from "react-icons/si";
+import { FaArrowLeft, FaHome } from "react-icons/fa";
+import { LuUsers } from "react-icons/lu";
+import { IoBookOutline, IoChatbubbleOutline } from "react-icons/io5";
+import { CiShoppingCart, CiWarning } from "react-icons/ci";
+import { FiBriefcase, FiKey } from "react-icons/fi";
 
 export const AllFeatures = () => {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ export const AllFeatures = () => {
   const features = [
     {
       id: "Employee",
-      icon: <FaUserTie />,
+      icon: <LuUsers />,
       contents: [
         {
           title: "Employee",
@@ -36,7 +36,7 @@ export const AllFeatures = () => {
     },
     {
       id: "Cleaning",
-      icon: <GiBroom />,
+      icon: <IoBookOutline />,
       contents: [
         {
           title: "Cleaning",
@@ -47,12 +47,12 @@ export const AllFeatures = () => {
       ],
     },
     {
-      id: "Casual Work",
-      icon: <FaBriefcase />,
+      id: "Casual",
+      icon: <FiBriefcase />,
       contents: [
         {
           title: "Casual",
-          desc: "specifically engineered to optimize casual workforce management. The system automates workforce scheduling and payroll processes, seamlessly streamlining interactions between administrators and personnel through a single, unified digital ecosystem.",
+          desc: "Specifically engineered to optimize casual workforce management. The system automates workforce scheduling and payroll processes, seamlessly streamlining interactions between administrators and personnel through a single, unified digital ecosystem.",
           logo: "/logo/Casual.png",
           images: "/features/Casual.png",
         },
@@ -60,11 +60,11 @@ export const AllFeatures = () => {
     },
     {
       id: "SellGo",
-      icon: <FaDesktop />,
+      icon: <CiShoppingCart />,
       contents: [
         {
           title: "SellGo",
-          desc: "an advanced sales force automation platform engineered to optimize the field operations of sales. The system fully digitizes the recording and reporting of all sales activities, from tracking store visits to capturing transactions in real-time.",
+          desc: "An advanced sales force automation platform engineered to optimize the field operations of sales. The system fully digitizes the recording and reporting of all sales activities, from tracking store visits to capturing transactions in real-time.",
           logo: "/logo/Sellgo.png",
           images: "/features/Sellgo.png",
         },
@@ -72,7 +72,7 @@ export const AllFeatures = () => {
     },
     {
       id: "Guard",
-      icon: <SiAdguard />,
+      icon: <FiKey />,
       contents: [
         {
           title: "Guard",
@@ -83,25 +83,23 @@ export const AllFeatures = () => {
       ],
     },
     {
-      id: "Issue",
+      id: "Feedback",
       icon: <CiWarning />,
       contents: [
         {
-          title: "Issue",
+          title: "Feedback",
           desc: "This ticketing module is used to record, track, and resolve issues or complaints from clients.",
-          // logo: "/logo/Guard.png",
           images: "/features/Issue.jpg",
         },
       ],
     },
     {
-      id: "AI",
-      icon: <FaBrain />,
+      id: "Ask AI",
+      icon: <IoChatbubbleOutline />,
       contents: [
         {
           title: "AI Asked",
           desc: "Skip the menus, chat with our AI for instant data-driven reports. Our intuitive AI eliminates the need to navigate multiple menus, allowing you to instantly access the service information you need.",
-          // logo: "/logo/Guard.png",
           images: "/features/AI.jpeg",
         },
       ],
@@ -111,7 +109,7 @@ export const AllFeatures = () => {
   const currentData = features.find((f) => f.id === activeTab);
 
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white py-8 font-sans lg:py-0 xl:py-12">
+    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white py-8 font-sans lg:py-28 xl:py-12">
       {/* Background Decor - Lingkaran Blur Halus */}
       <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-sky-200 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-sky-200 blur-[120px]" />
@@ -185,7 +183,7 @@ export const AllFeatures = () => {
                     </h2>
 
                     {/* Divider */}
-                    <div className="bg-primary h-1 w-16 rounded-full lg:w-32 xl:w-20" />
+                    <div className="bg-primary h-2 w-16 rounded-full lg:w-32 xl:w-20" />
 
                     {/* Logo */}
                     {content.logo && (
@@ -199,14 +197,14 @@ export const AllFeatures = () => {
                     )}
 
                     {/* Description */}
-                    <p className="text-sm font-semibold leading-relaxed text-slate-500 lg:text-4xl xl:text-base">
+                    <p className="text-justify text-sm font-semibold leading-relaxed text-slate-500 lg:text-4xl xl:text-base">
                       {content.desc}
                     </p>
                   </div>
 
                   {/* RIGHT - Phone Frame */}
                   <div className="flex w-full flex-1 justify-center">
-                    <div className="max-w-62.5 lg:max-w-100 xl:max-w-65 w-full">
+                    <div className="max-w-62.5 lg:max-w-100 w-full xl:max-w-80">
                       <PhoneFrame screenshot={content.images} />
                     </div>
                   </div>

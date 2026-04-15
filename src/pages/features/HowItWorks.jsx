@@ -17,27 +17,54 @@ export const HowItWorks = () => {
 
   const steps = [
     {
-      title: "Corporate & Enterprise Offices",
-      subtitle: "Streamlined Facility & Access Management",
-      desc: "Optimizes administrative workflows and visitor coordination. Ensures a secure, seamlessly managed corporate environment by integrating personnel schedules and daily operational reporting into one centralized dashboard.",
+      title: "Security Personnel",
+      subtitle: "App Used: Shelter Guard",
+      desc: "Designed to meet the critical demands of field operations, our platform seamlessly integrates patrol tracking, checkpoint verification, incident reporting, and real-time monitoring into one powerful tool.",
+      list: [
+        "Live Patrol Tracking",
+        "Checkpoint Verification",
+        "Incident Report",
+        "Visitor Management",
+      ],
       images: "/logo/Guard.png",
     },
     {
-      title: "Manufacturing & Industrial Sites",
-      subtitle: "High-Compliance Monitoring & Risk Mitigation",
-      desc: "Delivers robust monitoring and automated compliance tracking for complex industrial operations. Maintains stringent safety protocols and deploys rapid-response coordination to minimize operational downtime.",
+      title: "Sales / SPG / Canvasser Teams",
+      subtitle: "App Used: SellGo",
+      desc: "The primary needs are visit tracking, sales visibility, product insights, movement tracking, and performance monitoring, which is why field staff are necessary.",
+      list: [
+        "Real-time Sales Tracking",
+        "Visit Verification",
+        "Store-level Visibility",
+        "Product Performance Insights",
+        "Faster and Smarter Field Execution",
+      ],
       images: "/logo/Sellgo.png",
     },
     {
-      title: "Commercial Facilities & Retail",
-      subtitle: "Dynamic Deployment & Maintenance",
-      desc: "Enhances the visitor experience by upholding impeccable facility standards. Coordinates cleaning schedules, security deployments, and tenant requests in real-time to efficiently manage high-traffic environments.",
+      title: "Casual / Daily Operational Worker",
+      subtitle:
+        "Types of workers included: Event crew, Helpers, Pickers/packers, Support crew",
+      desc: "This type of workforce is flexible and based on daily, event, or project needs, requiring rapid deployment.",
+      list: [
+        "Rapid Workforce Deployment",
+        "Flexible Staffing Allocation",
+        "Simplified Coordination of Temporary Workers",
+        "Improved Visibility Into Attendance and Placement",
+      ],
       images: "/logo/Casual.png",
     },
     {
-      title: "Hospitality",
-      subtitle: "Precision & Quality Assurance",
-      desc: "Supports environments that require the highest standards of hygiene and security. Automates quality control audits and ensures all operational personnel adhere to strict industry regulations.",
+      title: "Cleaning Service",
+      subtitle: "App Used: Shelter Cleaning",
+      desc: "Focus on scheduling, cleaning task, relief staff support, and stock/inventory management tools .",
+      list: [
+        "Routine Cleaning Schedule",
+        "Direct Task Assignment",
+        "Relief Staff Replacement",
+        "Cleaning Supply Management",
+        "More Organized Service Execution",
+      ],
       images: "/logo/Shelia.png",
     },
   ];
@@ -78,17 +105,16 @@ export const HowItWorks = () => {
       {/* Header Halaman */}
       <div className="mb-10 text-center lg:mb-4 xl:mb-16">
         <h1 className="text-primary text-2xl font-black tracking-tight lg:text-7xl xl:text-3xl">
-          Industry Solutions
+          Find the Right App for Every Workforce Type
         </h1>
-        <p className="mt-4 text-sm font-semibold text-slate-500 lg:mt-10 lg:text-5xl xl:mt-2 xl:text-lg">
-          Empowering Diverse Sectors with Centralized Control. Adapting to
-          complex operational needs through data-driven efficiency and
-          integrated management.
+        <p className="mt-4 text-sm font-semibold text-slate-500 lg:mt-10 lg:text-[42px] xl:mt-2 xl:text-lg">
+          Explore which application best fits each workforce type based on its
+          operational function, field activity, and management needs.
         </p>
       </div>
 
       {/* Container Step */}
-      <div className="mx-auto flex max-w-5xl flex-col gap-10 lg:gap-4 xl:gap-4">
+      <div className="mx-auto flex max-w-5xl flex-col gap-10 pb-20 lg:gap-4 xl:gap-4">
         {steps.map((item, index) => (
           <motion.div
             key={index}
@@ -102,7 +128,7 @@ export const HowItWorks = () => {
           >
             {/* Image Section */}
             <div className="flex w-28 shrink-0 items-center justify-center lg:w-80 xl:w-40">
-              <div className="flex h-28 w-28 items-center justify-center rounded-4xl border border-slate-300 bg-white p-4 shadow-xl lg:h-96 lg:w-96 xl:h-40 xl:w-40">
+              <div className="rounded-4xl flex h-28 w-28 items-center justify-center border border-slate-300 bg-white p-4 shadow-xl lg:h-96 lg:w-96 xl:h-40 xl:w-40">
                 <img
                   src={item.images}
                   alt={item.title}
@@ -119,9 +145,25 @@ export const HowItWorks = () => {
               <p className="text-sm font-semibold leading-tight text-slate-500 lg:text-4xl xl:text-lg">
                 {item.subtitle}
               </p>
-              <p className="text-xs text-justify font-medium pt-4 leading-relaxed text-slate-500 lg:text-3xl xl:text-sm">
+              <p className="pt-4 text-justify text-xs font-medium leading-relaxed text-slate-500 lg:text-3xl xl:text-sm">
                 {item.desc}
               </p>
+
+              {/* List */}
+              <div className="mt-3 flex flex-col gap-4">
+                {item.list.map((listItem, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.08, duration: 0.3 }}
+                    className="w-fit rounded-full border border-slate-500 px-3 py-1.5 text-xs font-semibold text-slate-600 lg:px-6 lg:py-4 lg:text-3xl xl:px-5 xl:py-2 xl:text-sm"
+                  >
+                    {listItem}
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
         ))}

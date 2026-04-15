@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaArrowLeft, FaHome, FaPhoneAlt } from "react-icons/fa";
+import { FaArrowLeft, FaHome } from "react-icons/fa";
 
 export const RequestDemo = () => {
   const navigate = useNavigate();
@@ -45,13 +45,13 @@ export const RequestDemo = () => {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="relative z-10 flex flex-col items-center text-center"
+        className="relative z-10 flex flex-col items-center pt-2 text-center lg:pt-20 xl:pt-4"
       >
         <div className="mb-12 flex w-full items-center justify-center gap-6 lg:mb-10 xl:mb-16">
           <img
             src="/shelter+.png"
             alt="Shelter+ Logo"
-            className="h-auto w-[40%] lg:w-[30%] xl:w-[5%]"
+            className="h-auto w-[40%] lg:w-[25%] xl:w-[5%]"
           />
           <h1 className="text-primary py-2 text-xl font-black tracking-tight lg:py-2 lg:text-8xl xl:py-2 xl:text-3xl">
             Shelter+
@@ -89,21 +89,6 @@ export const RequestDemo = () => {
             Scan with your camera app
           </span>
         </div>
-
-        {/* Sales Contact Card */}
-        {/* <div className="mt-12 flex w-full max-w-sm items-center gap-4 rounded-2xl border border-slate-100 bg-[#DFE0FF] p-4 text-left lg:mt-20 lg:max-w-6xl lg:gap-8 lg:p-8 xl:mt-10 xl:max-w-md xl:gap-4 xl:p-4">
-          <div className="bg-primary lg:h-30 lg:w-30 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white lg:rounded-full xl:h-12 xl:w-12">
-            <FaPhoneAlt className="text-sm lg:text-5xl xl:text-lg" />
-          </div>
-          <div>
-            <h4 className="text-primary text-[10px] font-bold lg:text-3xl xl:text-sm">
-              Or speak directly with our sales representative
-            </h4>
-            <p className="text-[9px] font-medium text-black lg:text-3xl xl:text-[11px]">
-              Our team is happy to give you a live walkthrough of the platform.
-            </p>
-          </div>
-        </div> */}
       </motion.div>
     </div>
   );
