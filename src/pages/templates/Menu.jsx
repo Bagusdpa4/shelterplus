@@ -4,7 +4,7 @@ import { FaHome, FaRegStar, FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa6";
 import { PiWarningCircle } from "react-icons/pi";
 import { BiRepost } from "react-icons/bi";
-import { IoIosRocket } from "react-icons/io";
+import { IoRocketOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 export const Menu = () => {
@@ -31,7 +31,7 @@ export const Menu = () => {
     },
     {
       title: "Request Demo",
-      icon: <IoIosRocket />,
+      icon: <IoRocketOutline />,
       bgIcon: "bg-slate-200",
       path: "/req-demo",
     },

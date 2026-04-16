@@ -13,10 +13,10 @@ export const IdleOverlay = () => {
     setIsIdle(false);
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
-    // Set timer ke 45 detik idle
+    // Set timer ke 2 menit idle
     timeoutRef.current = setTimeout(() => {
       setIsIdle(true);
-    }, 45000);
+    }, 120000);
   };
 
   const handleExitIdle = () => {
@@ -62,13 +62,15 @@ export const IdleOverlay = () => {
             onLoadStart={() => console.log("⏳ Video: Start loading...")}
             onCanPlay={() => console.log("✅ Video: Ready to play (buffered).")}
             onPlay={() => console.log("▶️ Video: Attempting to play...")}
-            onPlaying={() => console.log("🎬 Video: Currently playing (Running).")}
+            onPlaying={() =>
+              console.log("🎬 Video: Currently playing (Running).")
+            }
             onWaiting={() => console.warn("⚠️ Video: Buffering/Waiting...")}
             onError={(e) => console.error("❌ Video Error:", e)}
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           >
             {/* Path langsung ke root jika file ada di /public/Intro.mp4 */}
-            <source src="/Shelter+.mp4" type="video/mp4" />
+            <source src="/SHELTER.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
