@@ -69,8 +69,8 @@ export const IdleOverlay = () => {
             onError={(e) => console.error("❌ Video Error:", e)}
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           >
-            {/* Path langsung ke root jika file ada di /public/Intro.mp4 */}
-            <source src="/SHELTER.mp4" type="video/mp4" />
+            {/* Path langsung ke root jika file ada di /Intro.mp4 */}
+            <source src="/SHELTER+.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
