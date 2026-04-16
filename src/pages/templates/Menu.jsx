@@ -14,25 +14,25 @@ export const Menu = () => {
     {
       title: "What is Shelter+ ?",
       icon: <PiWarningCircle />,
-      bgIcon: "bg-blue-900",
+      bgIcon: "bg-slate-200",
       path: "/what-is",
     },
     {
       title: "Features",
       icon: <FaRegStar />,
-      bgIcon: "bg-blue-900",
+      bgIcon: "bg-slate-200",
       path: "/all-features",
     },
     {
       title: "Best-Fit App",
       icon: <BiRepost />,
-      bgIcon: "bg-blue-900",
+      bgIcon: "bg-slate-200",
       path: "/how-it-works",
     },
     {
       title: "Request Demo",
       icon: <IoIosRocket />,
-      bgIcon: "bg-blue-900",
+      bgIcon: "bg-slate-200",
       path: "/req-demo",
     },
   ];
@@ -84,7 +84,7 @@ export const Menu = () => {
 
         {/* List Menu */}
         <div className="flex flex-col gap-0 lg:gap-10 xl:gap-4">
-        {menuItems.map((item, index) => (
+          {menuItems.map((item, index) => (
             <motion.button
               key={index}
               whileHover={{ scale: 1.02 }}
@@ -113,36 +113,6 @@ export const Menu = () => {
       </motion.div>
 
       {/* Navigation Bar Bawah */}
-      {/* <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-        className="mt-10 flex items-center gap-6 rounded-full border border-slate-100 bg-white p-2 shadow-lg lg:mt-16 lg:gap-10 lg:p-6 xl:mt-4 xl:gap-6 xl:p-4"
-      >
-        <button
-          onClick={() => navigate(-1)}
-          className="hover:text-primary flex cursor-pointer flex-col items-center gap-1 px-1 text-slate-400 transition-colors lg:gap-4 lg:px-8 xl:gap-2 xl:px-2"
-        >
-          <FaArrowLeft className="text-lg lg:text-5xl xl:text-xl" />
-          <span className="text-[10px] font-bold uppercase lg:text-2xl xl:text-[12px]">
-            Back
-          </span>
-        </button>
-
-        <button
-          onClick={() => navigate("/")}
-          className="bg-primary/10 text-primary hover:bg-primary flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-14 xl:w-14"
-        >
-          <FaHome className="text-xl lg:text-6xl xl:text-2xl" />
-        </button>
-
-        <button className="flex cursor-not-allowed flex-col items-center gap-1 px-1 text-slate-400 transition-colors lg:gap-4 lg:px-8 xl:gap-2 xl:px-2">
-          <FaArrowRight className="text-lg lg:text-5xl xl:text-xl" />
-          <span className="text-[10px] font-bold uppercase lg:text-2xl xl:text-[12px]">
-            Next
-          </span>
-        </button>
-      </motion.div> */}
       <div className="mt-16 flex w-full justify-center lg:mt-24 xl:mt-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
