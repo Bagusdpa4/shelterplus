@@ -158,7 +158,7 @@ export const HowItWorks = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.08, duration: 0.3 }}
-                    className="w-fit rounded-full border border-slate-500 px-3 py-1.5 text-xs font-semibold text-slate-600 lg:px-6 lg:py-4 lg:text-3xl xl:px-5 xl:py-2 xl:text-sm"
+                    className="w-fit rounded-full border border-sky-500 px-3 py-1.5 text-xs font-semibold text-sky-600 lg:px-6 lg:py-4 lg:text-3xl xl:px-5 xl:py-2 xl:text-sm"
                   >
                     {listItem}
                   </motion.div>

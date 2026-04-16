@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { PhoneFrame } from "../../components/assets/phoneFrame/PhoneFrame";
 import { FeatureTabs } from "../../components/assets/features/FeatureTabs";
-import { FaArrowLeft, FaHome } from "react-icons/fa";
+import { FaArrowLeft, FaShoppingCart, FaHome } from "react-icons/fa";
 import { LuUsers } from "react-icons/lu";
 import { IoBookOutline, IoChatbubbleOutline } from "react-icons/io5";
-import { CiShoppingCart, CiWarning } from "react-icons/ci";
+import { CiWarning } from "react-icons/ci";
 import { FiBriefcase, FiKey } from "react-icons/fi";
 
 export const AllFeatures = () => {
@@ -60,7 +60,7 @@ export const AllFeatures = () => {
     },
     {
       id: "SellGo",
-      icon: <CiShoppingCart />,
+      icon: <FaShoppingCart />,
       contents: [
         {
           title: "SellGo",
