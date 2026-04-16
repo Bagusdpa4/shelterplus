@@ -16,7 +16,7 @@ export const IdleOverlay = () => {
     // Set timer ke 2 menit idle
     timeoutRef.current = setTimeout(() => {
       setIsIdle(true);
-    }, 120000);
+    }, 60000);
   };
 
   const handleExitIdle = () => {
@@ -70,7 +70,7 @@ export const IdleOverlay = () => {
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           >
             {/* Path langsung ke root jika file ada di /Intro.mp4 */}
-            <source src="/SHELTER+.mp4" type="video/mp4" />
+            <source src="/shelterplus.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
