@@ -72,7 +72,7 @@ export const RequestDemo = () => {
 
         {/* QR Code Area */}
         <div className="relative flex flex-col items-center">
-          <div className="relative rounded-3xl bg-white p-6 shadow-2xl lg:p-16 xl:p-8">
+          <div className="relative rounded-3xl bg-white p-6 shadow-2xl lg:p-10 xl:p-8">
             {/* Siku Dekorasi (Corner Frame) */}
             <div className="border-primary absolute left-4 top-4 h-6 w-6 rounded-tl-lg border-l-4 border-t-4 lg:h-20 lg:w-20" />
             <div className="border-primary absolute right-4 top-4 h-6 w-6 rounded-tr-lg border-r-4 border-t-4 lg:h-20 lg:w-20" />
@@ -80,7 +80,7 @@ export const RequestDemo = () => {
             <div className="border-primary absolute bottom-4 right-4 h-6 w-6 rounded-br-lg border-b-4 border-r-4 lg:h-20 lg:w-20" />
 
             <img
-              src="/qr-code.png"
+              src="/QR.jpeg"
               alt="QR Code"
               className="lg:h-120 lg:w-120 h-40 w-40 object-contain xl:h-56 xl:w-56"
             />
